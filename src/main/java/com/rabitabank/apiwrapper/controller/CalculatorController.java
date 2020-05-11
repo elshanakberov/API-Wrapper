@@ -27,7 +27,7 @@ public class CalculatorController {
     @LogToDb
     @PostMapping("/add")
     public ResponseEntity add(@RequestBody Calculator calculator){
-                AddResponse response = calculatorClient.add(calculator.getInput1(),calculator.getInput2());
+           AddResponse response = calculatorClient.add(calculator.getInput1(),calculator.getInput2());
            return ResponseEntity.ok().body(response.getAddResult());
      }
 
